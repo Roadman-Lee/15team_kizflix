@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a5a01fb-8d7c-4b1b-af17-f29502fc01a5" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kizflix.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/15team_kizflix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kizflix/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kizflix/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kizflix/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kizflix/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kizflix/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kizflix/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contents/category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contents/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contents/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/mypage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/signin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24HTTa19BqzLpxGQDBUiFrVu52h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="5a5a01fb-8d7c-4b1b-af17-f29502fc01a5" name="변경" comment="" />
+      <created>1643286523195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643286523195</updated>
+      <workItem from="1643286526060" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
