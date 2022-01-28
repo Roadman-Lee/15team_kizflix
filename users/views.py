@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.contrib.auth import get_user_model # 사용자가 데이터베이스 안에 있는지 검사하는 함수
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def sign_up_view(request):
     if request.method == 'GET':
@@ -57,3 +58,13 @@ def sign_in_view(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+@login_required
+def like_post(request):
+
+    return
+
+@login_required
+def profile(request):
+    return
+

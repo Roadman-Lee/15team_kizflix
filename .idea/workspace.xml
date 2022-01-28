@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a5a01fb-8d7c-4b1b-af17-f29502fc01a5" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/bbb2d523-158d-401a-8fd5-deeaacde313a.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contents/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/join.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0002_userprofiles_userlikes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/contents/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contents/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_userprofiles_userlikes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
       <workItem from="1643287231539" duration="470000" />
       <workItem from="1643288073695" duration="575000" />
       <workItem from="1643288654338" duration="3811000" />
-      <workItem from="1643339343442" duration="5097000" />
+      <workItem from="1643339343442" duration="8631000" />
     </task>
     <servers />
   </component>
