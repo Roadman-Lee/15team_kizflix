@@ -1,6 +1,8 @@
 from django.db import models
 
+
 # Create your models here.
+
 
 class PostModel(models.Model):
     class Meta:
@@ -12,4 +14,3 @@ class PostModel(models.Model):
     like_count = models.IntegerField()
     post_file = models.FileField(upload_to='uploads/%Y/%m/%d')
     post_thumbnail = models.URLField(max_length=200)
-
