@@ -49,6 +49,9 @@ def sign_in_view(request):
         password = request.POST.get('password', None)
 
         me = auth.authenticate(request, username=username, password=password)
+        print('username:', username)
+        print('password:', password)
+
         if me is not None:
             auth.login(request, me)
             return redirect('/')
@@ -73,8 +76,8 @@ def logout(request):
 
 @login_required
 def like_post(request,id):
+    user = request.user.is_authenticated
     if request.method == 'GET':
-        user = request.user.is_authenticated
         # 01. 빈 리스트 만들기
         dblikes = []
         if user:
@@ -90,8 +93,16 @@ def like_post(request,id):
             return render(request, 'user/signin.html')
 
 
+
+
 @login_required
-def profile(request):
+def profile(request, id):
     # 01. user의 profile 가져오기
+
+    if request.method == 'POST':
+        user = request.user.is_authenticated
+        if user:
+            profile = UserProfiles.objects.get(user_id=request.user)
+            return
     # 02. profile의 pf_image 바꾸기
     return
