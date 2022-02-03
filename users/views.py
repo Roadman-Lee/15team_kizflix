@@ -59,10 +59,10 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
-@login_required
+# @login_required
 def like_post(request):
 
-    return
+    return render(request, 'users/mypage.html')
 
 @login_required
 def profile(request):
