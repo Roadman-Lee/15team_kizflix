@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -195,6 +196,26 @@
         </div>
     </div>
 
+=======
 
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+
+  <body>
+    <form action="/category/" method="post">
+      {% csrf_token %}
+      <input type="hidden" id="1" name="post_category" value="1">
+      <button type="submit">1번카테고리</button>
+    </form>
+    <form action="/category/" method="post">
+      {% csrf_token %}
+      <input type="hidden" id="2" name="post_category" value="2">
+      <button type="submit">2번카테고리</button>
+    </form>
+    {{ post_list }}
+  </body>
+>>>>>>> 938d20cb63e7c62e8b81fc161418a55f797e7a82
+
 </html>
