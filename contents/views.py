@@ -1,6 +1,3 @@
-
-from nis import cat
-from turtle import pos
 from django.shortcuts import render, redirect
 from users.models import UserModel, PostModel
 
@@ -37,3 +34,7 @@ def detail_view(request, id):
             return render(request, 'contents/detail.html', {'re_contents': recommanded_contents})
         else:
             return redirect('/sign-in')
+
+def index_view(request):
+
+    return render(request, 'contents/index.html')

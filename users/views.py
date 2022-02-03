@@ -35,10 +35,10 @@ def sign_up_view(request):
 
             else:
 
-                UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
-
-                # profile = UserProfiles(user=user)
-                # profile.save()
+                user_id = UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
+                user_id.save()
+                profile = UserProfiles(user_id=user_id)
+                profile.save()
 
                 return render(request, 'users/signin.html')
 
@@ -67,7 +67,7 @@ def sign_in_view(request):
 @login_required  # 사용자가 로그인이 되어 있어야 만 접근할 수 있는 함수
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('/sign-in')
 
 
 
@@ -82,19 +82,9 @@ def like_post(request,id):
             if UserLikes is not None:
                 likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
                 print(likes_postlist)
-
-                # likes_postlist = UserLikes.objects.all()
-
-                # likes_postlist = UserLikes.objects.filter(user_id=id).order_by('-created_at')
-                # 03. likes의 postid만 dblist에 저장하기
-                # 04. dblist를 돌면서 posts 정보 가져오기
-
                 for post in likes_postlist:
                     dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
                     # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
-
-
-
                 return render(request, 'users/mypage.html', {'dblikes':dblikes })
         else :
             return render(request, 'user/signin.html')
