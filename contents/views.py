@@ -1,5 +1,5 @@
 
-from nis import cat
+# from nis import cat
 from turtle import pos
 from django.shortcuts import render, redirect
 from users.models import UserModel, PostModel
