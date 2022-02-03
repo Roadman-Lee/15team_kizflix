@@ -23,6 +23,7 @@ def sign_up_view(request):
         nickname = request.POST.get('nickname', None)
         email = request.POST.get('email', None)
 
+
         if password != password2:
             return render(request, 'users/signup.html')
 
@@ -33,9 +34,13 @@ def sign_up_view(request):
                 return render(request, 'users/signup.html')
 
             else:
-                UserModel.objects.create_user(
-                    username=username, password=password, nickname=nickname, email=email)
-                return redirect('/sign-in')
+
+                UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
+
+                # profile = UserProfiles(user=user)
+                # profile.save()
+
+                return render(request, 'users/signin.html')
 
 
 def sign_in_view(request):
@@ -66,21 +71,33 @@ def logout(request):
 
 
 
-# @login_required
-def like_post(request, id):
+@login_required
+def like_post(request,id):
     if request.method == 'GET':
         user = request.user.is_authenticated
-        # 01. 내가 좋아요한 리스트
+        # 01. 빈 리스트 만들기
         dblikes = []
         if user:
-            # 02. 로그인한 유저가 좋아요한 포스트 가져오기
+            # 02. userid가 일치하는 likes db 가져오기'
             if UserLikes is not None:
-                likes_postlist = UserLikes.objects.filter(user_id=id)
+                likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
+                print(likes_postlist)
+
+                # likes_postlist = UserLikes.objects.all()
+
+                # likes_postlist = UserLikes.objects.filter(user_id=id).order_by('-created_at')
+                # 03. likes의 postid만 dblist에 저장하기
+                # 04. dblist를 돌면서 posts 정보 가져오기
 
                 for post in likes_postlist:
-                    dblikes.append(post.post_id.post_id)  # post_id를 출력
+                    dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
+                    # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
 
-                return render(request, 'users/mypage.html', {'dblikes': dblikes})
+
+
+                return render(request, 'users/mypage.html', {'dblikes':dblikes })
+        else :
+            return render(request, 'user/signin.html')
 
 
 @login_required

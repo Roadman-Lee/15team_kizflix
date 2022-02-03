@@ -1816,108 +1816,129 @@ permission_id</ColNames>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <key id="596" parent="501">
+    <column id="596" parent="501" name="post_file">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="597" parent="501" name="post_thumbnail">
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <key id="598" parent="501">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="597" parent="502" name="type">
+    <column id="599" parent="502" name="type">
       <DataType>text|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="598" parent="502" name="name">
+    <column id="600" parent="502" name="name">
       <DataType>text|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="599" parent="502" name="tbl_name">
+    <column id="601" parent="502" name="tbl_name">
       <DataType>text|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="600" parent="502" name="rootpage">
+    <column id="602" parent="502" name="rootpage">
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="601" parent="502" name="sql">
+    <column id="603" parent="502" name="sql">
       <DataType>text|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="602" parent="503" name="name">
+    <column id="604" parent="503" name="name">
       <Position>1</Position>
     </column>
-    <column id="603" parent="503" name="seq">
+    <column id="605" parent="503" name="seq">
       <Position>2</Position>
     </column>
-    <column id="604" parent="504" name="id">
+    <column id="606" parent="504" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="605" parent="504" name="post_id_id">
+    <column id="607" parent="504" name="user_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="606" parent="504" name="user_id_id">
+    <column id="608" parent="504" name="post_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="607" parent="504">
-      <ColNames>post_id_id</ColNames>
+    <column id="609" parent="504" name="created_at">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="610" parent="504">
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>my_user</RefTableName>
+    </foreign-key>
+    <foreign-key id="611" parent="504">
+      <ColNames>post_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>posts</RefTableName>
     </foreign-key>
-    <foreign-key id="608" parent="504">
-      <ColNames>user_id_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>my_user</RefTableName>
-    </foreign-key>
-    <index id="609" parent="504" name="user_likes_post_id_id_2eaf7922">
-      <ColNames>post_id_id</ColNames>
+    <index id="612" parent="504" name="user_likes_user_id_228eaf19">
+      <ColNames>user_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <index id="610" parent="504" name="user_likes_user_id_id_0b63f289">
-      <ColNames>user_id_id</ColNames>
+    <index id="613" parent="504" name="user_likes_post_id_290b1a29">
+      <ColNames>post_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="611" parent="504">
+    <key id="614" parent="504">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="612" parent="505" name="id">
+    <column id="615" parent="505" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="613" parent="505" name="pf_image">
-      <DataType>varchar(200)|0s</DataType>
+    <column id="616" parent="505" name="pf_image">
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="614" parent="505" name="user_id_id">
+    <column id="617" parent="505" name="user_id_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="615" parent="505">
+    <foreign-key id="618" parent="505">
       <ColNames>user_id_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>my_user</RefTableName>
     </foreign-key>
-    <index id="616" parent="505" name="user_profile_user_id_id_93681b77">
+    <index id="619" parent="505" name="sqlite_autoindex_user_profile_1">
       <ColNames>user_id_id</ColNames>
       <ColumnCollations></ColumnCollations>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
     </index>
-    <key id="617" parent="505">
+    <key id="620" parent="505">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="621" parent="505">
+      <ColNames>user_id_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_user_profile_1</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
