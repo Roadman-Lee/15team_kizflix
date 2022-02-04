@@ -95,3 +95,19 @@
     position: relative;
     padding: 10px;
 }
+.modal_wrapper{
+    border: 2px dashed red;
+    height: 100%;
+}
+.modal_inner{
+    border: 2px dashed blue;
+}
+.my_info{
+    border: 1px solid aqua;
+}
+.my_photo{
+    border: 1px solid royalblue;
+}
+.change_photo{
+    border: 1px solid rosybrown;
+}

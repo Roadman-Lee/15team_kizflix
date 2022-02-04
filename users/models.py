@@ -13,7 +13,6 @@ class UserModel(AbstractUser):
     nickname = models.CharField(max_length=256, null=False)
     password2 = models.CharField(max_length=256, null=False)
 
-
 class UserLikes(models.Model):
     class Meta:
         db_table = "user_likes"

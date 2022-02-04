@@ -1,126 +1,86 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<<<<<<< HEAD
+{% block static %}
+  <link rel="stylesheet" href="{% static 'users/css/mypage.css' %}">
+{% endblock %}
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="mypage.css">
-    <link rel="stylesheet" href="{% static 'users/css/mypage.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+{% block content %}
+  <div class="body_container">
+    <div class="body_inner">
+      <header></header>
 
-  </head>
-
-  <body>
-    <div class="body_container">
-      <div class="body_inner">
-        <header></header>
-
-        <!-- user info box -->
-        <div class="user_container">
-          <div class="user_inner">
-            <div class="user_box">
-              <div class="user_info_box">
-                <div class="user_img"><img src="" alt=""></div>
-                <div class="uesr_id">이성</div>
-              </div>
-              <div class="user_img_change">
-                <span id="change_profile" class="material-icons-outlined">
-                  settings
-                </span>
-              </div>
+      <!-- user info box -->
+      <div class="user_container">
+        <div class="user_inner">
+          <div class="user_box">
+            <div class="user_info_box">
+              <div class="user_img"><img src="" alt=""></div>
+              <div class="uesr_id">이성</div>
+            </div>
+            <div class="user_img_change">
+              <span id="change_profile" class="material-icons-outlined">
+                settings
+              </span>
             </div>
           </div>
         </div>
+      </div>
 
-        <h1>❤️<br>좋아요 한 영상</h1>
+      <h1>❤️<br>좋아요 한 영상</h1>
 
-        <!-- likes vido section -->
-        <div class="thumbnail_container">
-          <div class="thumbnail_inner">
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
-            <div class="thumbnail_box">
-              <div class="thumbnail_img"></div>
-              <div class="vod_name">비디오 이름</div>
-            </div>
+      <!-- likes vido section -->
+      <div class="thumbnail_container">
+        <div class="thumbnail_inner">
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"></div>
+            <div class="vod_name">비디오 이름</div>
           </div>
         </div>
-        <div id="modal_change_porfile" class="modal_overlay">
-          <div class="modal_window"></div>
+      </div>
+      <div id="modal_change_porfile" class="modal_overlay">
+        <div class="modal_window">
+          <div class="modal_wrapper">
+            <div class="modal_inner">
+              <div class="my_info"></div>
+              <div class="my_photo"></div>
+              <div class="change_photo"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="{% static 'js/modal.js' %}"></script>
-
-    {% comment %} <script>
-      const modal = document.getElementById("modal_change_porfile");
-
-      const buttonAddFeed = document.getElementById("change_profile");
-      buttonAddFeed.addEventListener("click", e => {
-        modal.style.display = "flex";
-        document.body.style.overflowY = "hidden";
-      });
-
-      modal.addEventListener("click", e => {
-        const evTarget = e.target
-        if (evTarget.classList.contains("modal_overlay")) {
-          modal.style.display = "none"
-        }
-      })
-
-      window.addEventListener("keyup", e => {
-        if (modal.style.display === "flex" && e.key === "Escape") {
-          modal.style.display = "none"
-        }
-      })
-    </script> {% endcomment %}
-
-  </body>
-
-=======
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-  </head>
-
-  <body>
-    {{ dblikes }}
-  </body>
-
->>>>>>> refs/remotes/origin/main
-</html>
+  </div>
+  <script type="text/javascript" src="{% static 'users/js/modal.js' %}"></script>
+{% endblock %}

@@ -84,7 +84,7 @@ def like_post(request,id):
             # 02. userid가 일치하는 likes db 가져오기'
             if UserLikes is not None:
                 likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
-                print(likes_postlist)
+                print("like_postlist:",likes_postlist)
                 for post in likes_postlist:
                     dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
                     # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
