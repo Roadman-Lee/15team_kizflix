@@ -1,0 +1,141 @@
+
+
+@font-face {
+    font-family: 'Binggrae';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+
+body{
+    background-image: url('static/index.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.vid-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px
+    auto;
+    position: relative;
+}
+
+section {
+    content:'';
+    background: linear-gradient(to bottom,white,transparent);
+    /*background: rgba(255, 255, 255, 0.7);*/
+    position: absolute;
+    left: 0;
+    height: 70%;
+    width: 100%;
+    z-index:1;
+}
+
+.vid-wrapper {
+    z-index:20;
+}
+.vid-head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.logo img {
+    height: 2vw;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.logout img {
+    height: 3vw;
+}
+
+.vid-title {
+    font-family: 'Binggrae', cursive;
+      /*background: #c70000;*/
+    display: flex;
+    align-items: center;
+
+}
+
+.title {
+    margin-top: 300px;
+    margin-left: 40px;
+    font-size: 60px;
+    color: #ffffff;
+    /*-webkit-text-stroke: 2px #00d0d0*/
+}
+
+.subtitle {
+    margin-top: -20px;
+    margin-left: 40px;
+    font-size: 40px;
+    color: #ffffff;
+    /*-webkit-text-stroke: 1px #ffffff*/
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 1000px;
+    margin-left: 95px;
+    z-index: -30;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home img{
+    height: 3vw;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.category img{
+    height: 3vw;
+}
+
+.mypage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mypage img{
+    height: 3vw;
+}
+
+.menu h6 {
+    color: #a8a8a8;
+    margin-top: 5px;
+}
+
+.mypage h6{
+    margin-top: 6px;
+
+}
+
+
+
+
