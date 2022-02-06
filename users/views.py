@@ -34,10 +34,9 @@ def sign_up_view(request):
                 return render(request, 'users/signup.html')
 
             else:
+                user = UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
 
-                user_id = UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
-                user_id.save()
-                profile = UserProfiles(user_id=user_id)
+                profile = UserProfiles(user=user)
                 profile.save()
 
                 return render(request, 'users/signin.html')
@@ -49,8 +48,6 @@ def sign_in_view(request):
         password = request.POST.get('password', None)
 
         me = auth.authenticate(request, username=username, password=password)
-        print('username:', username)
-        print('password:', password)
 
         if me is not None:
             auth.login(request, me)
@@ -96,12 +93,34 @@ def like_post(request,id):
 
 @login_required
 def profile(request, id):
-    # 01. user의 profile 가져오기
 
-    if request.method == 'POST':
-        user = request.user.is_authenticated
-        if user:
-            profile = UserProfiles.objects.get(user_id=request.user)
-            return
+    user = request.user.is_authenticated
+    if user:
+        user_exist = UserModel.objects.get(username=request.user)
+        profile = UserProfiles.objects.get(user=user_exist)
+
+        if request.method == 'POST':
+
+            # 클라이언트에서 서버로 수정할 프로필 정보 전달
+            pf_Edit = request.POST.get['pf_Edit']
+            # UPDATE
+            profile.pf_image = pf_Edit
+            profile.save()
+
+        return render(request, 'users/mypage.html', {'profile':profile})
+
     # 02. profile의 pf_image 바꾸기
-    return
+
+# def profileEdit(request,id):
+#     user = request.user.is_authenticated
+#     if request.method == 'POST':
+#         if user:
+#             # 클라이언트에서 서버로 수정할 프로필 정보 전달
+#             pf_Edit = request.POST.get['pf_Edit']
+#             # UPDATE
+#             user_exist = UserModel.objects.get(username=request.user)
+#             profile = UserProfiles.objects.get(user=user_exist)
+#             profile.pf_image = pf_Edit
+#             profile.save()
+#
+
