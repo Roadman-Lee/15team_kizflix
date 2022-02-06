@@ -1914,13 +1914,13 @@ permission_id</ColNames>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="617" parent="505" name="pf_image">
-      <DataType>varchar(100)|0s</DataType>
+    <column id="617" parent="505" name="user_id_id">
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="618" parent="505" name="user_id_id">
-      <DataType>bigint|0s</DataType>
+    <column id="618" parent="505" name="pf_image">
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>

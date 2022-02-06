@@ -34,11 +34,10 @@ def sign_up_view(request):
                 return render(request, 'users/signup.html')
 
             else:
+                user = UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
 
-                UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
-
-                # profile = UserProfiles(user=user)
-                # profile.save()
+                profile = UserProfiles(user=user)
+                profile.save()
 
                 return render(request, 'users/signin.html')
 
@@ -49,6 +48,7 @@ def sign_in_view(request):
         password = request.POST.get('password', None)
 
         me = auth.authenticate(request, username=username, password=password)
+
         if me is not None:
             auth.login(request, me)
             return redirect('/')
@@ -67,41 +67,60 @@ def sign_in_view(request):
 @login_required  # 사용자가 로그인이 되어 있어야 만 접근할 수 있는 함수
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('/sign-in')
 
 
 
 @login_required
 def like_post(request,id):
+    user = request.user.is_authenticated
     if request.method == 'GET':
-        user = request.user.is_authenticated
         # 01. 빈 리스트 만들기
         dblikes = []
         if user:
             # 02. userid가 일치하는 likes db 가져오기'
             if UserLikes is not None:
                 likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
-                print(likes_postlist)
-
-                # likes_postlist = UserLikes.objects.all()
-
-                # likes_postlist = UserLikes.objects.filter(user_id=id).order_by('-created_at')
-                # 03. likes의 postid만 dblist에 저장하기
-                # 04. dblist를 돌면서 posts 정보 가져오기
-
                 for post in likes_postlist:
                     dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
                     # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
-
-
-
                 return render(request, 'users/mypage.html', {'dblikes':dblikes })
         else :
             return render(request, 'user/signin.html')
 
 
+
+
 @login_required
-def profile(request):
-    # 01. user의 profile 가져오기
+def profile(request, id):
+
+    user = request.user.is_authenticated
+    if user:
+        user_exist = UserModel.objects.get(username=request.user)
+        profile = UserProfiles.objects.get(user=user_exist)
+
+        if request.method == 'POST':
+
+            # 클라이언트에서 서버로 수정할 프로필 정보 전달
+            pf_Edit = request.POST.get['pf_Edit']
+            # UPDATE
+            profile.pf_image = pf_Edit
+            profile.save()
+
+        return render(request, 'users/mypage.html', {'profile':profile})
+
     # 02. profile의 pf_image 바꾸기
-    return
+
+# def profileEdit(request,id):
+#     user = request.user.is_authenticated
+#     if request.method == 'POST':
+#         if user:
+#             # 클라이언트에서 서버로 수정할 프로필 정보 전달
+#             pf_Edit = request.POST.get['pf_Edit']
+#             # UPDATE
+#             user_exist = UserModel.objects.get(username=request.user)
+#             profile = UserProfiles.objects.get(user=user_exist)
+#             profile.pf_image = pf_Edit
+#             profile.save()
+#
+

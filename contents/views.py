@@ -1,6 +1,4 @@
 
-# from nis import cat
-from turtle import pos
 from django.shortcuts import render, redirect
 from users.models import UserModel, PostModel
 
@@ -32,8 +30,11 @@ def detail_view(request, id):
     if request.method == 'GET':
         user = request.user.is_authenticated
         if user:
-            recommanded_contents = UserModel.objects.get(
-                id=id)  # all에서 추천된 컨텐츠가 저장되어있는 db로 바꿔야함
+            recommanded_contents = UserModel.objects.get(id=id)  # all에서 추천된 컨텐츠가 저장되어있는 db로 바꿔야함
             return render(request, 'contents/detail.html', {'re_contents': recommanded_contents})
         else:
             return redirect('/sign-in')
+
+def index_view(request):
+
+    return render(request, 'contents/index.html')

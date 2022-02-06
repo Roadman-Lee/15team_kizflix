@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'contents/css/category.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    {% block static %}{% endblock %}
+  </head>
+
+  <body>
+    <div class="head">
+      <div class="logo">
+        <a href="###"><img src="https://i.imgur.com/XTlqijX.png"></a>
+      </div>
+      <div class="search-container">
+        <table class="search-wrapper">
+          <tr>
+            <td>
+              <input type="text" class="search-input" placeholder="검색어를 입력하세요.">
+            </td>
+            <td>
+              <a href="#">
+                <span class="material-icons-round">search</span>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="logout">
+        <a href="##"><img src="https://i.imgur.com/K7FSEfb.png"></a>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="home">
+        <a href="###"><img src="https://i.imgur.com/R92gdq9.png"></a>
+        <h6>추천</h6>
+      </div>
+      <div class="category">
+        <a href="####"><img src="https://i.imgur.com/Qyg1WxM.png"></a>
+        <h6>카테고리</h6>
+      </div>
+      <div class="mypage">
+        <a href="#####"><img src="https://i.imgur.com/TVLDUIs.png"></a>
+        <h6>마이페이지</h6>
+      </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+  </body>
+
+</html>

@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a5a01fb-8d7c-4b1b-af17-f29502fc01a5" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bbb2d523-158d-401a-8fd5-deeaacde313a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dc0e7b79-4401-471f-9a62-ac534d6af69e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dc0e7b79-4401-471f-9a62-ac534d6af69e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kizflix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kizflix.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d627cf1-3761-4832-b6af-e3ad8239a538.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d627cf1-3761-4832-b6af-e3ad8239a538.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contents/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contents/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0002_alter_userlikes_postid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0003_alter_userlikes_postid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0004_rename_postid_userlikes_post_id.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +141,7 @@
       <workItem from="1643288073695" duration="575000" />
       <workItem from="1643288654338" duration="3811000" />
       <workItem from="1643339343442" duration="8631000" />
-      <workItem from="1643865177112" duration="5611000" />
+      <workItem from="1643865177112" duration="8653000" />
     </task>
     <servers />
   </component>
@@ -172,7 +163,7 @@
     <SUITE FILE_PATH="coverage/kizflix$urls.coverage" NAME="urls 커버리지 결과" MODIFIED="1643288579955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kizflix" />
     <SUITE FILE_PATH="coverage/kizflix$models.coverage" NAME="models 커버리지 결과" MODIFIED="1643288573928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/users" />
     <SUITE FILE_PATH="coverage/kizflix$manage.coverage" NAME="manage 커버리지 결과" MODIFIED="1643289346195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/15team_kizflix$runserver.coverage" NAME="runserver 커버리지 결과" MODIFIED="1643867373135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/15team_kizflix$runserver.coverage" NAME="runserver 커버리지 결과" MODIFIED="1643888386584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kizflix$runserver.coverage" NAME="runserver 커버리지 결과" MODIFIED="1643347517531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

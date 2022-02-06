@@ -1,0 +1,60 @@
+.body_container{
+    height: 100vh;
+}
+.body_inner{
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+}
+/* video section */
+.video_container{
+    height: 100vh;
+    width: 70%;
+}
+.video_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.songs_info{
+    width: 93%;
+}
+.songs_title{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0; 
+}
+.songs_title span{
+    font-size: 48px;
+}
+
+.songs_source{
+    margin-top: 100px;
+}
+
+/* thumbnail section */
+.thumbnail_list_container{
+    height: 100vh;
+    width: 30%;
+}
+.thumbnail_list_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thumbnail_list_inner h1{
+    font-size: 48px;
+    margin-top: 0px;
+}
+.thumbnail_box{
+    margin-top: 10px;
+}
+.thumbnail_img{
+    display: flex;
+    justify-content: center;
+}
+.thumbnail_img img{
+    width: 95%;
+    border-radius: 15px;
+    object-fit: contain;
+}
