@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,53 +33,82 @@
               </form>
             </div>
         <div class="logout"><a href="##"><img src="https://i.imgur.com/K7FSEfb.png"></a></div>
+=======
+{% block content %}
+  <div class="category-container">
+    <div>
+      <h2>.</h2>
+>>>>>>> refs/remotes/origin/main
     </div>
-    <div class="menu">
-        <div class="home"><a href="###"><img src="https://i.imgur.com/R92gdq9.png"></a><h6>추천</h6></div>
-        <div class="category"><a href="####"><img src="https://i.imgur.com/Qyg1WxM.png"></a><h6>카테고리</h6></div>
-        <div class="mypage"><a href="#####"><img src="https://i.imgur.com/TVLDUIs.png"></a><h6>마이페이지</h6></div>
+    <div class="category-wrapper">
+      <div class="container">
+        <a href="#" class="button">인기동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">애창동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">놀이동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">생활동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">창작동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">전래동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">영어동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">교과서동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">오디오동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">중국어동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">만화주제가</a>
+      </div>
+      <div>
+        <h2>.</h2>
+      </div>
     </div>
 
-    <div class="category-container">
-        <div><h2>.</h2></div>
-        <div class="category-wrapper">
-            <div class="container">
-              <a href="#" class="button">인기동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">애창동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">놀이동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">생활동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">창작동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">전래동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">영어동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">교과서동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">오디오동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">중국어동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">만화주제가</a>
-            </div>
-            <div><h2>.</h2></div>
-        </div>
-
+  </div>
+  <div class="content-container">
+    <div class="content-wrapper">
+      <figure class="thumbnail">
+        <img src="{% static 'contents/img/001.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/002.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/003.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/004.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
     </div>
+<<<<<<< HEAD
     <div class="content-container">
 
         <div class="content-wrapper">
@@ -168,3 +199,61 @@
 
 </body>
 </html>
+=======
+    <div class="content-wrapper">
+      <figure class="thumbnail">
+        <img src="{% static 'contents/img/005.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/006.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/007.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/008.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="content-wrapper">
+      <figure class="thumbnail">
+        <img src="{% static 'contents/img/009.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/010.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/011.png' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/012.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+  </div>
+{% endblock content %}
+>>>>>>> refs/remotes/origin/main

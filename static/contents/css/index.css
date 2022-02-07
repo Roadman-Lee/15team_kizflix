@@ -103,8 +103,13 @@ section {
 .navbar {
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     margin-top: 40px;
     /*margin-left: 95px;*/
+=======
+    /* margin-top: 1000px; */
+    margin-left: 95px;
+>>>>>>> refs/remotes/origin/main
     z-index: -30;
 }
 
