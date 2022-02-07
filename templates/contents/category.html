@@ -1,164 +1,131 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'contents/css/category.css' %}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <script type="text/javascript" src="{% static 'contents/js/category.js' %}"></script>
-</head>
-<body>
-    <div class="head">
-        <div class="logo"><a href="###"><img src="https://i.imgur.com/XTlqijX.png"></a></div>
-            <div id="cover">
-              <form method="get" action="">
-                <div class="tb">
-                  <div class="td"><input type="text" name="search" placeholder="검색어를 입력하세요." required></div>
-                  <div class="td" id="s-cover">
-                    <button type="submit">
-                      <div id="s-circle"></div>
-                      <span></span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-        <div class="logout"><a href="##"><img src="https://i.imgur.com/K7FSEfb.png"></a></div>
+{% block content %}
+  <div class="category-container">
+    <div>
+      <h2>.</h2>
     </div>
-    <div class="menu">
-        <div class="home"><a href="###"><img src="https://i.imgur.com/R92gdq9.png"></a><h6>추천</h6></div>
-        <div class="category"><a href="####"><img src="https://i.imgur.com/Qyg1WxM.png"></a><h6>카테고리</h6></div>
-        <div class="mypage"><a href="#####"><img src="https://i.imgur.com/TVLDUIs.png"></a><h6>마이페이지</h6></div>
-    </div>
-
-    <div class="category-container">
-        <div><h2>.</h2></div>
-        <div class="category-wrapper">
-            <div class="container">
-              <a href="#" class="button">인기동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">애창동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">놀이동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">생활동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">창작동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">전래동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">영어동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">교과서동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">오디오동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">중국어동요</a>
-            </div>
-            <div class="container">
-              <a href="#" class="button">만화주제가</a>
-            </div>
-            <div><h2>.</h2></div>
-        </div>
-
-    </div>
-    <div class="content-container">
-        <div class="content-wrapper">
-            <figure class="thumbnail">
-              <img src="{% static 'contents/img/001.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/002.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/003.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/004.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-        </div>
-        <div class="content-wrapper">
-            <figure class="thumbnail">
-              <img src="{% static 'contents/img/005.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/006.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/007.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/008.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-        </div>
-        <div class="content-wrapper">
-            <figure class="thumbnail">
-              <img src="{% static 'contents/img/009.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/010.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/011.png' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-            <figure class="thumbnail"><img src="{% static 'contents/img/012.jpg' %}" />
-              <figcaption>
-                <h3>동요제목</h3>
-              </figcaption>
-              <a href="#"></a>
-            </figure>
-        </div>
+    <div class="category-wrapper">
+      <div class="container">
+        <a href="#" class="button">인기동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">애창동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">놀이동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">생활동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">창작동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">전래동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">영어동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">교과서동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">오디오동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">중국어동요</a>
+      </div>
+      <div class="container">
+        <a href="#" class="button">만화주제가</a>
+      </div>
+      <div>
+        <h2>.</h2>
+      </div>
     </div>
 
-
-</body>
-</html>
+  </div>
+  <div class="content-container">
+    <div class="content-wrapper">
+      <figure class="thumbnail">
+        <img src="{% static 'contents/img/001.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/002.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/003.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/004.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="content-wrapper">
+      <figure class="thumbnail">
+        <img src="{% static 'contents/img/005.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/006.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/007.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/008.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="content-wrapper">
+      <figure class="thumbnail">
+        <img src="{% static 'contents/img/009.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/010.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/011.png' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="thumbnail"><img src="{% static 'contents/img/012.jpg' %}"/>
+        <figcaption>
+          <h3>동요제목</h3>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+  </div>
+{% endblock content %}
