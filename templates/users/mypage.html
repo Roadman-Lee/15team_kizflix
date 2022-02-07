@@ -1,87 +1,85 @@
 {% extends "base.html" %}
 {% load static %}
 {% block static %}
-<link rel="stylesheet" href="{% static 'users/css/mypage.css' %}">
+  <link rel="stylesheet" href="{% static 'users/css/mypage.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="body_container">
-  <div class="body_inner">
 
-    <!-- user info box -->
-    <div class="user_container">
-      <div class="user_inner">
-        <div class="user_box">
-          <div class="user_info_box">
-            <div class="user_img" ><img id="profile" src="{% static 'users/img/octonut.png' %}" alt=""></div>
-            <div class="uesr_id">User_ID</div>
-          </div>
-          <div class="user_img_change">
-            <img id="change_profile" src="{% static 'users/img/account.png' %}" alt="버튼">
+  <div class="body_container">
+    <div class="body_inner">
+      <!-- user info box -->
+      <div class="user_container">
+        <div class="user_inner">
+          <div class="user_box">
+            <div class="user_info_box">
+              <div class="user_img"><img src="" alt=""></div>
+              <div class="uesr_id">{{ profile.user }}</div>
+            </div>
+            <div class="user_img_change">
+              <span id="add_feed" class="material-icons-outlined">
+                settings
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="string">
-      <h1>❤️<br>좋아요 한 영상</h1>
-    </div>
-
-    <!-- likes vido section -->
-    <div class="thumbnail_container">
-      <div class="thumbnail_inner">
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
+      <!-- user info box -->
+      <div class="user_container">
+        <div class="user_inner">
+          <div class="user_box">
+            <div class="user_info_box">
+              <div class="user_img"><img id="profile" src="{% static 'users/img/octonut.png' %}" alt=""></div>
+              <div class="uesr_id">User_ID</div>
+            </div>
+            <div class="user_img_change">
+              <img id="change_profile" src="{% static 'users/img/account.png' %}" alt="버튼">
+            </div>
+          </div>
         </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-        <div class="thumbnail_box">
-          <div class="thumbnail_img"><img
-              src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420"
-              alt=""></div>
-        </div>
-
       </div>
-    </div>
 
+      <div class="string">
+        <h1>❤️<br>좋아요 한 영상</h1>
+      </div>
 
-    <div id="modal_change_porfile" class="modal_overlay">
-      <div class="modal_window">
+      <!-- likes vido section -->
+      <div class="thumbnail_container">
+        <div class="thumbnail_inner">
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+          <div class="thumbnail_box">
+            <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="modal_change_porfile" class="modal_overlay">
+        <div class="modal_window">
           <form action="" method="post" class="madal_wrap" id="change_profile_img">
             <input type="radio" id="octonut" name="profile_img">
             <label for="octonut" class="octonut profile_img"></label>
@@ -95,22 +93,21 @@
             <label for="jinikiz" class="jinikiz profile_img"></label>
             <input type="radio" id="ggomopop" name="profile_img">
             <label for="ggomopop" class="ggomopop profile_img"></label>
-            <input type="radio" id="junitoni"name="profile_img">
+            <input type="radio" id="junitoni" name="profile_img">
             <label for="junitoni" class="junitoni profile_img"></label>
             <input type="radio" id="congsun" name="profile_img">
             <label for="congsun" class="congsun profile_img"></label>
-            <input type="radio" id="roti"name="profile_img">
+            <input type="radio" id="roti" name="profile_img">
             <label for="roti" class="roti profile_img"></label>
             <div class="submit_btn">
               <button type="submit">프로필 사진 바꾸기</button>
             </div>
           </form>
+        </div>
       </div>
-    </div>
 
-  
+    </div>
   </div>
-</div>
-<script type="text/javascript" src="{% static 'users/js/modal.js' %}"></script>
-<script type="text/javascript" src="{% static 'users/js/change.js' %}"></script>
+  <script type="text/javascript" src="{% static 'users/js/modal.js' %}"></script>
+  <script type="text/javascript" src="{% static 'users/js/change.js' %}"></script>
 {% endblock %}

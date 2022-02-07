@@ -81,6 +81,7 @@ def like_post(request,id):
             # 02. userid가 일치하는 likes db 가져오기'
             if UserLikes is not None:
                 likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
+                print(likes_postlist)
                 for post in likes_postlist:
                     dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
                     # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
@@ -102,7 +103,7 @@ def profile(request, id):
         if request.method == 'POST':
 
             # 클라이언트에서 서버로 수정할 프로필 정보 전달
-            pf_Edit = request.POST.get['pf_Edit']
+            pf_Edit = request.POST.get['pf_give']
             # UPDATE
             profile.pf_image = pf_Edit
             profile.save()
