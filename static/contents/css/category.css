@@ -1,25 +1,24 @@
-
-
-
 .logo img {
-    height: 2vw;
-    margin-top: 13px;
-    margin-left: 10px;
-
+  height: 2vw;
+  margin-top: 13px;
+  margin-left: 10px;
 }
-.head{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    margin-left: 300px;
-    margin-right: 300px;
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 * {
   outline: none;
 }
-
 
 .tb {
   display: table;
@@ -92,8 +91,8 @@ button {
   width: 43px;
   height: 43px;
   margin-top: 0;
-    border: 15px solid #ffffff;
-    background-color: transparent;
+  border: 15px solid #ffffff;
+  background-color: transparent;
   border-radius: 50%;
   transition: 0.5s ease all;
 }
@@ -119,14 +118,14 @@ button span:after {
   right: 0;
   width: 45px;
   height: 15px;
-    border-radius: 10px;
+  border-radius: 10px;
   transform: rotateZ(0);
   transition: 0.5s ease all;
 }
 
 button span:before,
 button span:after {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 #s-cover:hover #s-circle {
@@ -162,77 +161,72 @@ button span:after {
   background-color: #ffffff;
 }
 
-
-
 .logout img {
-    height: 3vw;
+  height: 3vw;
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    margin-left: 95px;
-
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 95px;
 }
 
 .home {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.home img{
-    height: 3vw;
+.home img {
+  height: 3vw;
 }
 
 .category {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 80px;
-    margin-right: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-.category img{
-    height: 3vw;
+.category img {
+  height: 3vw;
 }
 
 .mypage {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.mypage img{
-    height: 3vw;
+.mypage img {
+  height: 3vw;
 }
 
 .menu h6 {
-    color: #a8a8a8;
-    margin-top: 5px;
-
+  color: #a8a8a8;
+  margin-top: 5px;
 }
 
-.mypage h6{
-    margin-top: 6px;
-
+.mypage h6 {
+  margin-top: 6px;
 }
 
 /* 동요 카테고리 */
 
 .category-container {
-    background: rgba(246, 246, 246, 0.60);
+  background: rgba(246, 246, 246, 0.6);
 }
 
-.category-container h2{
-    color: rgba(246, 246, 246, 0.6);
+.category-container h2 {
+  color: rgba(246, 246, 246, 0.6);
 }
 
 .category-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 3px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
 }
 
 .category-wrapper a {
@@ -253,7 +247,7 @@ button span:after {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  text-decoration : none;
+  text-decoration: none;
 }
 .button:after {
   content: "";
@@ -289,27 +283,29 @@ button span:after {
 /* 컨텐츠 */
 
 .content-wrapper {
-    display: flex;
-    justify-content: center;
-    background: rgba(246, 246, 246, 0.60);
-
+  display: flex;
+  justify-content: center;
+  background: rgba(246, 246, 246, 0.6);
 }
 
-
 @font-face {
-    font-family: 'Binggrae';
-    font-weight: 700;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.ttf') format("truetype");
-    font-display: swap;
+  font-family: "Binggrae";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.ttf")
+      format("truetype");
+  font-display: swap;
 }
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 figure.thumbnail {
-  font-family: 'Binggrae';
+  font-family: "Binggrae";
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -319,7 +315,7 @@ figure.thumbnail {
   color: #fc5e00;
   text-align: left;
   font-size: 16px;
-    background: rgba(246, 246, 246, 0.60);
+  background: rgba(246, 246, 246, 0.6);
 }
 figure.thumbnail * {
   -webkit-box-sizing: border-box;
@@ -342,7 +338,7 @@ figure.thumbnail figcaption {
   right: 0;
 }
 figure.thumbnail:after {
-  content: '';
+  content: "";
   background-color: rgba(255, 255, 255, 0.65);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -419,4 +415,3 @@ figure.thumbnail.hover i {
   transform: translate(0px, 0px);
   opacity: 1;
 }
-

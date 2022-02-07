@@ -20,7 +20,8 @@
         <a href="###"><img src="https://i.imgur.com/XTlqijX.png"></a>
       </div>
       <div id="cover">
-        <form method="get" action="">
+        <form method="post" action="/search/">
+          {% csrf_token %}
           <div class="tb">
             <div class="td"><input type="text" name="search" placeholder="검색어를 입력하세요." required="required"></div>
             <div class="td" id="s-cover">
