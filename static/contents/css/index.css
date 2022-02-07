@@ -36,7 +36,7 @@ section {
     /*background: rgba(255, 255, 255, 0.7);*/
     position: absolute;
     left: 0;
-    height: 70%;
+    height: 60%;
     width: 100%;
     z-index:1;
 }
@@ -71,10 +71,22 @@ section {
 }
 
 .title {
-    margin-top: 300px;
+    margin-top: 250px;
     margin-left: 40px;
+    width: 190px;
     font-size: 60px;
     color: #ffffff;
+    background-color: #ffd433;
+    /*-webkit-text-stroke: 2px #00d0d0*/
+}
+
+.title2 {
+    margin-top: -52px;
+    margin-left: 40px;
+    font-size: 60px;
+    width: 250px;
+    color: #ffffff;
+    background-color: #ffd433;
     /*-webkit-text-stroke: 2px #00d0d0*/
 }
 
@@ -83,14 +95,16 @@ section {
     margin-left: 40px;
     font-size: 40px;
     color: #ffffff;
-    /*-webkit-text-stroke: 1px #ffffff*/
+    width: 375px;
+    background-color: #00d0d0;
+    /*-webkit-text-stroke: 1px #39f595*/
 }
 
 .navbar {
     display: flex;
     justify-content: center;
-    margin-top: 1000px;
-    margin-left: 95px;
+    margin-top: 40px;
+    /*margin-left: 95px;*/
     z-index: -30;
 }
 
@@ -126,16 +140,159 @@ section {
     height: 3vw;
 }
 
-.menu h6 {
+h6 {
     color: #a8a8a8;
-    margin-top: 5px;
+    margin-top: 17px;
 }
 
 .mypage h6{
-    margin-top: 6px;
+    margin-top: 15px;
+
+}
+
+
+@font-face {
+    font-family: 'Binggrae';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+h2 {
+    margin-top: 40px;
+    font-family: 'Binggrae';
+    text-align: center;
+    /*color: #ed2517;*/
+    background: linear-gradient(to bottom, #00d0d0, #39f595);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    background: rgba(246, 246, 246, 0.60);
 
 }
 
 
 
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.thumbnail {
+  font-family: 'Binggrae';
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  max-width: 250px;
+  height: 140px;
+  width: 100%;
+  color: #fc5e00;
+  text-align: left;
+  font-size: 16px;
+    background: rgba(246, 246, 246, 0.60);
+}
+figure.thumbnail * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  border-radius: 20px;
+}
+figure.thumbnail img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+figure.thumbnail:after,
+figure.thumbnail figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+figure.thumbnail:after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.65);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  border-radius: 20px;
+}
+figure.thumbnail figcaption {
+  z-index: 1;
+  padding: 40px;
+}
+figure.thumbnail h3,
+figure.thumbnail .links {
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+}
+figure.thumbnail h3 {
+  line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+figure.thumbnail p {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+figure.thumbnail i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px 25px;
+  font-size: 34px;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+figure.thumbnail a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+figure.thumbnail:hover img,
+figure.thumbnail.hover img {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+figure.thumbnail:hover:after,
+figure.thumbnail.hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+figure.thumbnail:hover h3,
+figure.thumbnail.hover h3,
+figure.thumbnail:hover p,
+figure.thumbnail.hover p,
+figure.thumbnail:hover i,
+figure.thumbnail.hover i {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
 
