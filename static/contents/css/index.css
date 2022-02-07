@@ -89,7 +89,7 @@ section {
 .navbar {
     display: flex;
     justify-content: center;
-    margin-top: 1000px;
+    /* margin-top: 1000px; */
     margin-left: 95px;
     z-index: -30;
 }
