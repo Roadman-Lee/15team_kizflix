@@ -1,36 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="{% static 'contents/css/category.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
+    <script type="text/javascript" src="{% static 'contents/js/category.js' %}"></script>
 </head>
 <body>
     <div class="head">
         <div class="logo"><a href="###"><img src="https://i.imgur.com/XTlqijX.png"></a></div>
-<!--        <div class="search-container">-->
-<!--            <table class="search-wrapper">-->
-<!--                <tr>-->
-<!--                    <td>-->
-<!--                        <input type="text" class="search-input" placeholder="검색어를 입력하세요.">-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                        <a href="#"><span class="material-icons-round">search</span>-->
-<!--                        </a>-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--            </table>-->
-<!--        </div>-->
-        <div class="search-box">
             <div id="cover">
               <form method="get" action="">
                 <div class="tb">
-                  <div class="td"><input type="text" placeholder="Search" required></div>
+                  <div class="td"><input type="text" name="search" placeholder="검색어를 입력하세요." required></div>
                   <div class="td" id="s-cover">
                     <button type="submit">
                       <div id="s-circle"></div>
@@ -40,7 +27,6 @@
                 </div>
               </form>
             </div>
-        </div>
         <div class="logout"><a href="##"><img src="https://i.imgur.com/K7FSEfb.png"></a></div>
     </div>
     <div class="menu">
@@ -52,160 +38,124 @@
     <div class="category-container">
         <div><h2>.</h2></div>
         <div class="category-wrapper">
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">인기동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">인기동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">애창동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">애창동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">놀이동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">놀이동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">생활동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">생활동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">창작동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">창작동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">전래동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">전래동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">영어동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">영어동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">교과서동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">교과서동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">오디오동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">오디오동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">중국어동요</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">중국어동요</a>
             </div>
-            <div class="content">
-              <a href="#" class="btn">
-                <span class="right title">만화주제가</span>
-              </a>
+            <div class="container">
+              <a href="#" class="button">만화주제가</a>
             </div>
+            <div><h2>.</h2></div>
         </div>
 
     </div>
     <div class="content-container">
-        <div class="category-content">
-            <div class="first hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/BoIw4Ra.png" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>상어가족 | 아기상어 | 핑크퐁 상어가족</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
-            <div class="second hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/yu6rs4j.png" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>동물의 왕 사자 | 핑크퐁 동물동요</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
-            <div class="third hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/DogWP7f.jpg" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>중장비차송 | 자동차 노래 | 건설 크레인 | 운반차 덤프트럭 | 인기 동요 | 모두모두쇼</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
+        <div class="content-wrapper">
+            <figure class="thumbnail">
+              <img src="{% static 'contents/img/001.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/002.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/003.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/004.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
         </div>
-        <div class="category-content">
-            <div class="first hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/lfQl9x9.jpg" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>상어가족 | 아기상어 | 핑크퐁 상어가족</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
-            <div class="second hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/iGGEnIN.jpg" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>동물의 왕 사자 | 핑크퐁 동물동요</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
-            <div class="third hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/9Y8M1Q4.jpg" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>중장비차송 | 자동차 노래 | 건설 크레인 | 운반차 덤프트럭 | 인기 동요 | 모두모두쇼</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
+        <div class="content-wrapper">
+            <figure class="thumbnail">
+              <img src="{% static 'contents/img/005.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/006.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/007.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/008.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
         </div>
-        <div class="category-content">
-            <div class="first hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/BoIw4Ra.png" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>상어가족 | 아기상어 | 핑크퐁 상어가족</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
-            <div class="second hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/yu6rs4j.png" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>동물의 왕 사자 | 핑크퐁 동물동요</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
-            <div class="third hero">
-              <img class="hero-profile-img" src="https://i.imgur.com/DogWP7f.jpg" alt="">
-              <div class="hero-description-bk"></div>
-              <div class="hero-description">
-                <p>중장비차송 | 자동차 노래 | 건설 크레인 | 운반차 덤프트럭 | 인기 동요 | 모두모두쇼</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">노래 듣기</a>
-              </div>
-            </div>
+        <div class="content-wrapper">
+            <figure class="thumbnail">
+              <img src="{% static 'contents/img/009.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/010.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/011.png' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+            <figure class="thumbnail"><img src="{% static 'contents/img/012.jpg' %}" />
+              <figcaption>
+                <h3>동요제목</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
         </div>
     </div>
 
