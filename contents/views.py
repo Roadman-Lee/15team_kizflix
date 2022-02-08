@@ -20,14 +20,14 @@ def category_view(request, slug):
             return render(request, 'user/signin.html')
 
 
-def detail_view(request, id):
+def detail_view(request, post_id):
     user = request.user.is_authenticated
     if user:
         post_id_recieve = request.POST.get('post_give')
         if request.method == 'GET':
-            post = PostModel.objects.get(post_id=post_id_recieve)
+            post = PostModel.objects.get(post_id=post_id)
 
-            return render(request, 'contets/detail.html', {'post': post})
+            return render(request, 'contents/detail.html', {'post': post})
 
             # recommanded_contents = UserModel.objects.get(id=id)  all에서 추천된 컨텐츠가 저장되어있는 db로 바꿔야함
             # return render(request, 'contents/detail.html', {'re_contents': recommanded_contents})
@@ -68,9 +68,10 @@ def search(request):
     if request.method == 'POST':
         search_post = request.POST.get('search')
         print(search_post)
-        result_post = PostModel.objects.all()  # 전부가져와서 search_post를 포함한 것을 출력
-        find_post = [post for post in result_post if search_post in post.post_title]
-        return render(request, 'contents/category.html', {'find_post': find_post})
+        find_post = PostModel.objects.filter(post_title__contains=search_post)  # 전부가져와서 search_post를 포함한 것을 출력
+        # find_post = [post for post in result_post if search_post in post.post_title]
+        return render(request, 'contents/category.html', {'post_list': find_post})
+        # return render(request, 'contents/category.html', {'find_post': find_post})
     else:
         return render(request, 'contents/category.html')
 

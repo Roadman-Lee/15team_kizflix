@@ -10,13 +10,14 @@
     <title>Title</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '' %}">
+    <link rel="stylesheet" href="{% static 'contents/css/particle.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <script type="text/javascript" src="{% static 'contents/js/category.js' %}"></script>
   </head>
 
   <body>
+    <script type="text/javascript" src="{% static 'contents/js/paricle.js' %}"></script>
     <div class="head">
       <div class="logo">
         <a href="###"><img src="https://i.imgur.com/XTlqijX.png"></a>
@@ -98,31 +99,29 @@
 
     </div>
     <div class="content-container">
-      {% if find_post %}
-        {% for contents in find_post %}
-          <div class="content-wrapper">
+<!--      {% if find_post %}-->
+<!--        {% for post in find_post %}-->
+<!--          <a class="content-wrapper" href="/detail/{{ post.post_id }}">-->
+<!--            <figure class="thumbnail">-->
+<!--              <img src="{{ post.post_thumbnail }}"/>-->
+<!--              <figcaption>-->
+<!--                <h3>{{ post.post_title }}</h3>-->
+<!--              </figcaption>-->
+<!--            </figure>-->
+<!--          </a>-->
+<!--        {% endfor %}-->
+<!--      {% else %}-->
+        {% for post in post_list%}
+          <a class="content-wrapper" href="/detail/{{ post.post_id }}">
             <figure class="thumbnail">
-              <img src="{{ contents.post_thumbnail }}"/>
+              <img src="{{ post.post_thumbnail }}"/>
               <figcaption>
-                <h3>{{ contents.post_title }}</h3>
+                <h3>{{ post.post_title }}</h3>
               </figcaption>
-              <a href="{{contents.post_url}}"></a>
             </figure>
-          </div>
+          </a>
         {% endfor %}
-      {% else %}
-        {% for contents in post_list%}
-          <div class="content-wrapper">
-            <figure class="thumbnail">
-              <img src="{{ contents.post_thumbnail }}"/>
-              <figcaption>
-                <h3>{{ contents.post_title }}</h3>
-              </figcaption>
-              <a href="{{contents.post_url}}"></a>
-            </figure>
-          </div>
-        {% endfor %}
-      {% endif %}
+<!--      {% endif %}-->
     </div>
   </body>
 
