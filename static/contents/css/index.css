@@ -103,13 +103,7 @@ section {
 .navbar {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    margin-top: 40px;
-    /*margin-left: 95px;*/
-=======
-    /* margin-top: 1000px; */
     margin-left: 95px;
->>>>>>> refs/remotes/origin/main
     z-index: -30;
 }
 
@@ -173,7 +167,7 @@ h2 {
     font-family: 'Binggrae';
     text-align: center;
     /*color: #ed2517;*/
-    background: linear-gradient(to bottom, #00d0d0, #39f595);
+    background: linear-gradient(to bottom, #fd6801, #ffd433);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
