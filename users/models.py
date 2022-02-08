@@ -24,5 +24,5 @@ class UserProfiles(models.Model):
     class Meta:
         db_table = "user_profile"
     user = models.OneToOneField(UserModel, related_name="profile", on_delete=models.CASCADE)
-    pf_image = models.ImageField(upload_to='pf_image/', default='default_img.jpeg')
+    pf_image = models.ImageField(upload_to='pf_image/', default='octonut.png')
 

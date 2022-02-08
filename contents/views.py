@@ -23,7 +23,7 @@ def category_view(request, slug):
 def detail_view(request, id):
     user = request.user.is_authenticated
     if user:
-        post_id_recieve = request.POST.get['post_give']
+        post_id_recieve = request.POST.get('post_give')
         if request.method == 'GET':
             post = PostModel.objects.get(post_id=post_id_recieve)
 
@@ -35,7 +35,8 @@ def detail_view(request, id):
         if request.method == 'POST':
 
             # 정보 불러오기
-            like_recieve = request.POST.get['like_give']  # 1 : 좋아요 0 : 좋아요 취소
+            like_recieve = request.POST.get('like_give')
+            # 1 : 좋아요 0 : 좋아요 취소
 
             user_exist = UserModel.objects.get(username=request.user)
 
@@ -75,5 +76,8 @@ def search(request):
 
 
 def index_view(request):
-
-    return render(request, 'contents/index.html')
+    user = request.user.is_authenticated
+    if user :
+        return render(request, 'contents/index.html')
+    else :
+        return render(request, 'users/signin.html')

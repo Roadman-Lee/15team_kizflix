@@ -11,9 +11,10 @@
     <div class="user_inner">
       <div class="user_box">
         <div class="user_info_box">
-          <div class="user_img"><img id="profile" src="{% static 'users/img/octonut.png' %}" alt=""></div>
+          <div class="user_img"><img id="profile" src="../../static/users/img/{{ profile.pf_image }}" alt=""></div>
+{#            src="{% static 'users/img/{{profile.pf_image}}' %}" #}
           <div class="uesr_id">
-            <h3>User_ID</h3>
+            <h3>{{ profile.user.nickname }}</h3>
           </div>
         </div>
         <div class="user_img_change">
@@ -45,24 +46,25 @@
 
   <div id="modal_change_porfile" class="modal_overlay">
     <div class="modal_window">
-      <form action="" method="post" class="madal_wrap" id="change_profile_img">
-        <input type="radio" id="octonut" name="profile_img">
+      <form action="/mypage/{{ user.id }}" method="post" class="madal_wrap" id="change_profile_img">
+          {% csrf_token %}
+        <input type="radio" id="octonut" name="profile_img" value="octonut.png">
         <label for="octonut" class="octonut profile_img"></label>
-        <input type="radio" id="tdkiz" name="profile_img">
+        <input type="radio" id="tdkiz" name="profile_img" value="tdkiz.png">
         <label for="tdkiz" class="tdkiz profile_img"></label>
-        <input type="radio" id="robocapoli" name="profile_img">
+        <input type="radio" id="robocapoli" name="profile_img" value="robocapoli.png">
         <label for="robocapoli" class="robocapoli profile_img"></label>
-        <input type="radio" id="tnitni" name="profile_img">
+        <input type="radio" id="tnitni" name="profile_img" value="tnitni.png">
         <label for="tnitni" class="tnitni profile_img"></label>
-        <input type="radio" id="jinikiz" name="profile_img">
+        <input type="radio" id="jinikiz" name="profile_img" value="jinikiz.png">
         <label for="jinikiz" class="jinikiz profile_img"></label>
-        <input type="radio" id="ggomopop" name="profile_img">
+        <input type="radio" id="ggomopop" name="profile_img" value="ggomopop.png">
         <label for="ggomopop" class="ggomopop profile_img"></label>
-        <input type="radio" id="junitoni" name="profile_img">
+        <input type="radio" id="junitoni" name="profile_img" value="junitoni.png">
         <label for="junitoni" class="junitoni profile_img"></label>
-        <input type="radio" id="congsun" name="profile_img">
+        <input type="radio" id="congsun" name="profile_img" value="congsun.png">
         <label for="congsun" class="congsun profile_img"></label>
-        <input type="radio" id="roti" name="profile_img">
+        <input type="radio" id="roti" name="profile_img" value="roti.png">
         <label for="roti" class="roti profile_img"></label>
         <div class="submit_btn">
           <button type="submit">프로필 사진 바꾸기</button>

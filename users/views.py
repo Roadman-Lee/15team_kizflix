@@ -17,21 +17,23 @@ def sign_up_view(request):
         else:
             return render(request, 'users/signup.html')
     elif request.method == 'POST':
-        username = request.POST.get('username', None)
-        password = request.POST.get('password', None)
-        password2 = request.POST.get('password2', None)
-        nickname = request.POST.get('nickname', None)
-        email = request.POST.get('email', None)
+        username = request.POST.get('username','')
+        password = request.POST.get('password','')
+        password2 = request.POST.get('password2','')
+        nickname = request.POST.get('nickname','')
+        email = request.POST.get('email','')
 
 
         if password != password2:
-            return render(request, 'users/signup.html')
+            return render(request, 'users/signup.html', {'error': '패스워드를 확인해주세요'})
 
         else:
+            if username == '' or password == '':
+                return render(request, 'user/signup.html', {'error': '사용자 이름과 비밀번호는 필수 값 입니다'})
             exist_user = get_user_model().objects.filter(username=username)
 
             if exist_user:
-                return render(request, 'users/signup.html')
+                return render(request, 'users/signup.html', {'error': '사용자가 이미 존재합니다'})
 
             else:
                 user = UserModel.objects.create_user(username=username, password=password, nickname=nickname, email=email)
@@ -44,8 +46,8 @@ def sign_up_view(request):
 
 def sign_in_view(request):
     if request.method == 'POST':
-        username = request.POST.get('username', None)
-        password = request.POST.get('password', None)
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
 
         me = auth.authenticate(request, username=username, password=password)
 
@@ -54,7 +56,7 @@ def sign_in_view(request):
             return redirect('/')
             # return HttpResponse(me.username)
         else:
-            return redirect('sign-in')
+            return render(request, 'users/signin.html', {'error': '유저이름 혹은 패스워드를 확인 해 주세요'})
 
     elif request.method == 'GET':
         user = request.user.is_authenticated
@@ -71,45 +73,33 @@ def logout(request):
 
 
 
-@login_required
-def like_post(request,id):
-    user = request.user.is_authenticated
-    if request.method == 'GET':
-        # 01. 빈 리스트 만들기
-        dblikes = []
-        if user:
-            # 02. userid가 일치하는 likes db 가져오기'
-            if UserLikes is not None:
-                likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
-                print(likes_postlist)
-                for post in likes_postlist:
-                    dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
-                    # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
-                return render(request, 'users/mypage.html', {'dblikes':dblikes })
-        else :
-            return render(request, 'user/signin.html')
-
-
-
 
 @login_required
 def profile(request, id):
-
     user = request.user.is_authenticated
     if user:
         user_exist = UserModel.objects.get(username=request.user)
         profile = UserProfiles.objects.get(user=user_exist)
-
         if request.method == 'POST':
-
             # 클라이언트에서 서버로 수정할 프로필 정보 전달
-            pf_Edit = request.POST.get['pf_give']
+            pf_Edit = request.POST.get('profile_img')
+            print(pf_Edit)
             # UPDATE
             profile.pf_image = pf_Edit
             profile.save()
+            return redirect('/mypage/'+str(id))
 
-        return render(request, 'users/mypage.html', {'profile':profile})
-
+        elif request.method == 'GET':
+            # 01. 빈 리스트 만들기
+            dblikes = []
+            if UserLikes is not None:
+                likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
+                for post in likes_postlist:
+                    dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
+                    # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
+            return render(request, 'users/mypage.html', {'profile':profile, 'dblikes':dblikes})
+    else:
+        return render(request, 'user/signin.html')
     # 02. profile의 pf_image 바꾸기
 
 # def profileEdit(request,id):

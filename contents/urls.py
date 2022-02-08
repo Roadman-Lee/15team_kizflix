@@ -5,6 +5,6 @@ urlpatterns = [
     path('category/<slug:slug>', views.category_view, name='category'),
     path('detail/', views.detail_view, name='detail'),
     path('search/', views.search, name='search'),
-    path('index/', views.index_view, name='index'),
+    path('/', views.index_view, name='index'),
     path('', views.index_view, name='index'),
 ]

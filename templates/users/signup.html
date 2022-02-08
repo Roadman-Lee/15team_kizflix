@@ -36,6 +36,11 @@
             <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요.">
 
             <button type="submit" class="btn_submit">SUBSCRIBE</button>
+          {% if error %}
+              <div class="alert alert-danger" role="alert">
+                  {{ error }}
+              </div>
+          {% endif %}
           </form>
         </div>
       </div>
