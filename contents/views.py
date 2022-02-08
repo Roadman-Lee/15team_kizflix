@@ -97,6 +97,13 @@ def search(request):
 def index_view(request):
     user = request.user.is_authenticated
     if user :
-        return render(request, 'contents/index.html')
+        like_post = PostModel.objects.all().order_by('like_count')
+        popular_post = []
+        for post in like_post[:30] :
+            popular_post.append(post)
+
+        print(popular_post)
+
+        return render(request, 'contents/index.html', {'popular_post':popular_post})
     else :
         return render(request, 'users/signin.html')
