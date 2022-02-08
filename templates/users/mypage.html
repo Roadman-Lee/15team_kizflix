@@ -29,17 +29,24 @@
   </div>
 
   <!-- likes vido section -->
-  <div class="thumbnail_container">
-    <div class="thumbnail_inner">
-      <div class="thumbnail_box">
-        <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
-      </div>
-      <div class="thumbnail_box">
-        <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
-      </div>
-      <div class="thumbnail_box">
-        <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>
-      </div>
+
+    <div class="thumbnail_container">
+        <div class="thumbnail_inner">
+
+        {% for dblike in dblikes %}
+            {% for like in dblike %}
+                <div class="thumbnail_box">
+                <div class="thumbnail_img"><img src="{{ like.post_thumbnail }}" alt=""></div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+{#      <div class="thumbnail_box">#}
+{#        <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>#}
+{#      </div>#}
+{#      <div class="thumbnail_box">#}
+{#        <div class="thumbnail_img"><img src="https://phinf.pstatic.net/tvcast/20220126_56/SoOFe_1643177735466R8ieq_PNG/1643177693347.png?type=u748_420" alt=""></div>#}
+{#      </div>#}
 
     </div>
   </div>

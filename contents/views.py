@@ -5,7 +5,17 @@ from .models import PostModel
 
 # Create your views here.
 
+def category_popular_view(request):
+    user = request.user.is_authenticated
+    if request.method == 'GET':
+        if user:
 
+            # 1. pk별 카테고리 포스트 받아오기
+
+            category_post = PostModel.objects.filter(post_category= 'popular')
+            return render(request, 'contents/category.html', {'post_list': category_post})
+        else:
+            return render(request, 'user/signin.html')
 def category_view(request, slug):
 
     user = request.user.is_authenticated
@@ -20,7 +30,7 @@ def category_view(request, slug):
             return render(request, 'user/signin.html')
 
 
-def detail_view(request, id):
+def detail_view(request):
     user = request.user.is_authenticated
     if user:
         post_id_recieve = request.POST.get('post_give')

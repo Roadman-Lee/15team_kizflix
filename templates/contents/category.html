@@ -59,7 +59,7 @@
       </div>
       <div class="category-wrapper">
         <div class="container">
-          <a href="/category/popular" class="button">인기동요</a>
+          <a href="/category/" class="button">인기동요</a>
         </div>
         <div class="container">
           <a href="/category/love" class="button">애창동요</a>
@@ -114,6 +114,7 @@
         {% for contents in post_list%}
           <div class="content-wrapper">
             <figure class="thumbnail">
+                <input type="text" id="post_id" name="post_give" value="{{ contents.post_id }}">
               <img src="{{ contents.post_thumbnail }}"/>
               <figcaption>
                 <h3>{{ contents.post_title }}</h3>

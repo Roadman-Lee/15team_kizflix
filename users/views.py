@@ -96,7 +96,11 @@ def profile(request, id):
                 likes_postlist = UserLikes.objects.filter(user_id=request.user).order_by('-created_at')
                 for post in likes_postlist:
                     dblikes.append(PostModel.objects.filter(post_id=post.post_id_id))
+
+
+
                     # dblikes.append(PostModel.objects.filter(post_id=post.post_id_id).values())
+
             return render(request, 'users/mypage.html', {'profile':profile, 'dblikes':dblikes})
     else:
         return render(request, 'user/signin.html')
