@@ -16,6 +16,7 @@ def category_popular_view(request):
             return render(request, 'contents/category.html', {'post_list': category_post})
         else:
             return render(request, 'user/signin.html')
+
 def category_view(request, slug):
 
     user = request.user.is_authenticated
@@ -38,6 +39,9 @@ def detail_view(request, post_id):
         post_id_recieve = request.POST.get('post_give')
         if request.method == 'GET':
             post = PostModel.objects.get(post_id=post_id)
+            if post.like_count == None :
+                post.like_count = 0
+                post.save()
 
             return render(request, 'contents/detail.html', {'post': post})
 
@@ -62,6 +66,7 @@ def detail_view(request, post_id):
                 post_id = PostModel.objects.filter(post_id=post_id_recieve)
                 count = post_id.like_count + 1
                 post_id.update(like_count=count)
+                print('좋아요')
 
             else:
                 # user, post정보와 일치하는 like정보 삭제
@@ -72,6 +77,7 @@ def detail_view(request, post_id):
                 post_id = PostModel.objects.filter(post_id=post_id_recieve)
                 count = post_id.like_count - 1
                 post_id.update(like_count=count)
+                print('좋아요 취소')
 
     else:
         return redirect('/sign-in')

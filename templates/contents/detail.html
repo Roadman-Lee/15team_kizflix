@@ -17,14 +17,14 @@
           </video>
           <div class="songs_info">
             <div class="songs_title">
-              <span>동요제목</span>
+              <span>{{ post.post_title }}</span>
               <span class="material-icons-outlined">
                 favorite_border
               </span>
             </div>
             <div class="songs_hits">
               <span>
-                조회수 3000, 좋아요 200
+                조회수 1회 , 좋아요 {{ post.like_count }}개
               </span>
             </div>
             <div class="songs_desc">

@@ -100,42 +100,29 @@
 
     </div>
     <div class="content-container">
-        <!--      {% if find_post %}-->
-            <!--        {% for post in find_post %}-->
-                <!--          <a class="content-wrapper" href="/detail/{{ post.post_id }}">-->
-                <!--            <figure class="thumbnail">-->
-                <!--              <img src="{{ post.post_thumbnail }}"/>-->
-                <!--              <figcaption>-->
-                <!--                <h3>{{ post.post_title }}</h3>-->
-                <!--              </figcaption>-->
-                <!--            </figure>-->
-                <!--          </a>-->
-                <!--        {% endfor %}-->
-            <!--      {% else %}-->
-            {% for post in post_list %}
-                <a class="content-wrapper" href="/detail/{{ post.post_id }}">
-                    <figure class="thumbnail">
-                        <img src="{{ post.post_thumbnail }}"/>
-                        <figcaption>
-                            <h3>{{ post.post_title }}</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            {% endfor %}
-        {% else %}
-            {% for contents in post_list %}
-                <div class="content-wrapper">
-                    <figure class="thumbnail">
-                        <input type="text" id="post_id" name="post_give" value="{{ contents.post_id }}">
-                        <img src="{{ contents.post_thumbnail }}"/>
-                        <figcaption>
-                            <h3>{{ contents.post_title }}</h3>
-                        </figcaption>
-                        <a href="{{ contents.post_url }}"></a>
-                    </figure>
-                </div>
-            {% endfor %}
-        {% endif %}
+<!--      {% if find_post %}-->
+<!--        {% for post in find_post %}-->
+<!--          <a class="content-wrapper" href="/detail/{{ post.post_id }}">-->
+<!--            <figure class="thumbnail">-->
+<!--              <img src="{{ post.post_thumbnail }}"/>-->
+<!--              <figcaption>-->
+<!--                <h3>{{ post.post_title }}</h3>-->
+<!--              </figcaption>-->
+<!--            </figure>-->
+<!--          </a>-->
+<!--        {% endfor %}-->
+<!--      {% else %}-->
+        {% for post in post_list%}
+          <a class="content-wrapper" href="/detail/{{ post.post_id }}">
+            <figure class="thumbnail">
+              <img src="{{ post.post_thumbnail }}"/>
+              <figcaption>
+                <h3>{{ post.post_title }}</h3>
+              </figcaption>
+            </figure>
+          </a>
+        {% endfor %}
+<!--      {% endif %}-->
     </div>
     </body>
 
