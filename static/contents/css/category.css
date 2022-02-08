@@ -11,8 +11,11 @@
   margin-right: 300px;
 }
 .content-container {
+  max-width: 90%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-left: 70px;
 }
 * {
   outline: none;
@@ -184,9 +187,11 @@ button span:after {
   margin-top: 6px;
 }
 /* 동요 카테고리 */
+
 .category-container {
   background: rgba(246, 246, 246, 0.6);
 }
+
 .category-container h2 {
   color: rgba(246, 246, 246, 0.6);
 }
@@ -248,7 +253,8 @@ button span:after {
 .content-wrapper {
   display: flex;
   justify-content: center;
-  background: rgba(246, 246, 246, 0.6);
+  /*background: rgba(246, 246, 246, 0.6);*/
+  margin-bottom: 10px;
 }
 @font-face {
   font-family: “Binggrae”;
@@ -276,7 +282,7 @@ figure.thumbnail {
   width: 100%;
   color: #FC5E00;
   text-align: left;
-  font-size: 16px;
+  font-size: 12px;
   background: rgba(246, 246, 246, 0.6);
 }
 figure.thumbnail * {

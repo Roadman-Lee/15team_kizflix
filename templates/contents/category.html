@@ -4,128 +4,140 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '' %}">
+    <link rel="stylesheet" href="{% static 'contents/css/particle.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <script type="text/javascript" src="{% static 'contents/js/category.js' %}"></script>
-  </head>
+</head>
 
-  <body>
-    <div class="head">
-      <div class="logo">
+<body>
+<script type="text/javascript" src="{% static 'contents/js/paricle.js' %}"></script>
+<div class="head">
+    <div class="logo">
         <a href="###"><img src="https://i.imgur.com/XTlqijX.png"></a>
-      </div>
-      <div id="cover">
+    </div>
+    <div id="cover">
         <form action="/search/" method="post">
-          <div class="tb"></div>
-          <div class="td"><input class="search-input" type="text" name="search" placeholder="검색어를 입력하세요." required="required"></div>
-          <div class="td" id="s-cover">
-            <button type="submit" name="submit">
-              <div id="s-circle"></div>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </form>
+            <div class="tb"></div>
+            <div class="td"><input class="search-input" type="text" name="search" placeholder="검색어를 입력하세요."
+                                   required="required"></div>
+            <div class="td" id="s-cover">
+                <button type="submit" name="submit">
+                    <div id="s-circle"></div>
+                    <span></span>
+                </button>
+            </div>
     </div>
-    <div class="logout">
-      <a href="##"><img src="https://i.imgur.com/K7FSEfb.png"></a>
-    </div>
-  </div>
-  <div class="menu">
+    </form>
+</div>
+<div class="logout">
+    <a href="##"><img src="https://i.imgur.com/K7FSEfb.png"></a>
+</div>
+</div>
+<div class="menu">
     <div class="home">
-      <a href="###"><img src="https://i.imgur.com/R92gdq9.png"></a>
-      <h6>추천</h6>
+        <a href="###"><img src="https://i.imgur.com/R92gdq9.png"></a>
+        <h6>추천</h6>
     </div>
     <div class="category">
-      <a href="####"><img src="https://i.imgur.com/Qyg1WxM.png"></a>
-      <h6>카테고리</h6>
+        <a href="####"><img src="https://i.imgur.com/Qyg1WxM.png"></a>
+        <h6>카테고리</h6>
     </div>
     <div class="mypage">
-      <a href="#####"><img src="https://i.imgur.com/TVLDUIs.png"></a>
-      <h6>마이페이지</h6>
+        <a href="#####"><img src="https://i.imgur.com/TVLDUIs.png"></a>
+        <h6>마이페이지</h6>
     </div>
-  </div>
-  {% block content %}
+</div>
+{% block content %}
     <div class="category-container">
-      <div>
-        <h2>.</h2>
-      </div>
-      <div class="category-wrapper">
-        <div class="container">
-          <a href="/category/" class="button">인기동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/love" class="button">애창동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/play" class="button">놀이동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/life" class="button">생활동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/create" class="button">창작동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/tradition" class="button">전래동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/english" class="button">영어동요</a>
-        </div>
-        <div class="container">
-          <a href="#" class="button">교과서동요</a>
-        </div>
-        <div class="container">
-          <a href="#" class="button">오디오동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/china" class="button">중국어동요</a>
-        </div>
-        <div class="container">
-          <a href="/category/animation" class="button">만화주제가</a>
-        </div>
         <div>
-          <h2>.</h2>
+            <h2>.</h2>
         </div>
-      </div>
+        <div class="category-wrapper">
+            <div class="container">
+                <a href="/category/" class="button">인기동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/love" class="button">애창동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/play" class="button">놀이동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/life" class="button">생활동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/create" class="button">창작동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/tradition" class="button">전래동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/english" class="button">영어동요</a>
+            </div>
+            <div class="container">
+                <a href="#" class="button">교과서동요</a>
+            </div>
+            <div class="container">
+                <a href="#" class="button">오디오동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/china" class="button">중국어동요</a>
+            </div>
+            <div class="container">
+                <a href="/category/animation" class="button">만화주제가</a>
+            </div>
+            <div>
+                <h2>.</h2>
+            </div>
+        </div>
 
     </div>
     <div class="content-container">
-      {% if find_post %}
-        {% for contents in find_post %}
-          <div class="content-wrapper">
-            <figure class="thumbnail">
-              <img src="{{ contents.post_thumbnail }}"/>
-              <figcaption>
-                <h3>{{ contents.post_title }}</h3>
-              </figcaption>
-              <a href="{{contents.post_url}}"></a>
-            </figure>
-          </div>
-        {% endfor %}
-      {% else %}
-        {% for contents in post_list%}
-          <div class="content-wrapper">
-            <figure class="thumbnail">
-                <input type="text" id="post_id" name="post_give" value="{{ contents.post_id }}">
-              <img src="{{ contents.post_thumbnail }}"/>
-              <figcaption>
-                <h3>{{ contents.post_title }}</h3>
-              </figcaption>
-              <a href="{{contents.post_url}}"></a>
-            </figure>
-          </div>
-        {% endfor %}
-      {% endif %}
+        <!--      {% if find_post %}-->
+            <!--        {% for post in find_post %}-->
+                <!--          <a class="content-wrapper" href="/detail/{{ post.post_id }}">-->
+                <!--            <figure class="thumbnail">-->
+                <!--              <img src="{{ post.post_thumbnail }}"/>-->
+                <!--              <figcaption>-->
+                <!--                <h3>{{ post.post_title }}</h3>-->
+                <!--              </figcaption>-->
+                <!--            </figure>-->
+                <!--          </a>-->
+                <!--        {% endfor %}-->
+            <!--      {% else %}-->
+            {% for post in post_list %}
+                <a class="content-wrapper" href="/detail/{{ post.post_id }}">
+                    <figure class="thumbnail">
+                        <img src="{{ post.post_thumbnail }}"/>
+                        <figcaption>
+                            <h3>{{ post.post_title }}</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            {% endfor %}
+        {% else %}
+            {% for contents in post_list %}
+                <div class="content-wrapper">
+                    <figure class="thumbnail">
+                        <input type="text" id="post_id" name="post_give" value="{{ contents.post_id }}">
+                        <img src="{{ contents.post_thumbnail }}"/>
+                        <figcaption>
+                            <h3>{{ contents.post_title }}</h3>
+                        </figcaption>
+                        <a href="{{ contents.post_url }}"></a>
+                    </figure>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
-  </body>
+    </body>
 
-</html>
+    </html>
 {% endblock content %}
